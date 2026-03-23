@@ -12,7 +12,7 @@ Sistem; **NASDAQ (TEFAS: AFT)** ve **Altın (TEFAS: KZL)** varlıklarını tekni
 
 ---
 
-## 🔬 Kantitatif Metodoloji (Quantitative Methodology)
+## 🔬 Kantitatif Metodoloji
 Sistemin karar mekanizması, basit indikatör takibi yerine tarihsel veri setleri üzerinde yapılan **İstatistiksel Yüzdelik (Percentile Analysis)** çalışmalarına dayanır:
 
 * **Veri Madenciliği:** Nasdaq ve XAUUSD varlıklarının son 10 yıllık günlük verileri analiz edilerek "Normal Dağılım" dışındaki sapmalar tespit edilmiştir.
