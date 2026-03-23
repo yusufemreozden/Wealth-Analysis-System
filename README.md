@@ -8,7 +8,7 @@
 ## 🎯 Proje Hakkında
 Bu proje; finansal piyasalardaki gürültüyü filtrelemek ve veri odaklı uzun vadeli yatırım kararları almak amacıyla geliştirilmiş bir **Algorithmic Decision Support System** (Algoritmik Karar Destek Sistemi)'dir. 
 
-Sistem; **NASDAQ (TEFAS: AFT)** ve **Altın (TEFAS: KZL)** varlıklarını teknik indikatörler aracılığıyla analiz eder ve belirlenen **"Matris Stratejisi"**ne göre günlük aksiyon raporları üretir. Yatırımcının duygusal kararlar yerine, önceden tanımlanmış matematiksel eşiklere göre hareket etmesini sağlar.
+Sistem; **NASDAQ (TEFAS: AFT)** ve **Altın (TEFAS: KZL)** varlıklarını teknik indikatörler aracılığıyla analiz eder ve belirlenen matris stratejisine göre günlük aksiyon raporları üretir. Yatırımcının duygusal kararlar yerine, önceden tanımlanmış matematiksel eşiklere göre hareket etmesini sağlar.
 
 ---
 
