@@ -1,0 +1,35 @@
+name: Günlük Analiz Botu
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '00 12 * * *' # Her gün TSİ 15:00 (UTC 12:00)
+
+# 2026 Node.js 24 zorunluluğunu onaylayan ve uyarıyı kapatan ayar
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kodları Çek
+        uses: actions/checkout@v4
+
+      - name: Python Kur (v3.12)
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Kütüphaneleri Kur
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Botu Çalıştır
+        env:
+          # GitHub Secrets'tan gelen verilerin koda aktarıldığı kritik bölüm
+          GMAIL_ADRESI: ${{ secrets.GMAIL_ADRESI }}
+          GMAIL_SIFRESI: ${{ secrets.GMAIL_SIFRESI }}
+          ALICI_MAILLER: ${{ secrets.ALICI_MAILLER }}
+        run: python bot.py
