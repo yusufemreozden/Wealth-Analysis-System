@@ -91,13 +91,13 @@ def mail_gonder(ndx, xau, usd_rate, eur_rate, btc_price, report_date):
     else: 
         if xau['status'] in ["KRİZ FIRSATI!", "BÜYÜK İNDİRİM", "İNDİRİM", "DESTEK YAKIN (PUSU)", "RUTİN"]:
             ozet = f"""<b>Stratejik Korunma:</b> Nasdaq '{ndx['status']}' bölgesine ulaşarak ısınmıştır. 
-            Bu aşamada serveti korumak ve fırsat kollamak adına rota altına (KZL Fon) çevrilmelidir. 
+            Bu aşamada serveti korumak ve fırsat kollamak adına rota, altına (KZL Fonu) çevrilmelidir. 
             Altın şu an '{xau['status']}' durumunda olduğu için nakit akışını buraya yönlendirmek istatistiksel olarak daha güvenli bir limandır."""
             ozet_renk = "#d35400"
         else:
             ozet = f"""<b>Tam Pusu Modu:</b> Hem Nasdaq hem de Altın riskli (görece pahalı) bölgelerdedir. 
             Servet yaratmak kadar, yaratılanı korumak da sanattır. Her iki varlık da soğuyana kadar 
-            new mermileri harcamayıp nakit/para piyasası fonlarında beklemek en akılcı hamle olacaktır."""
+            yeni mermileri harcamayıp nakit/para piyasası fonlarında beklemek en akılcı hamle olacaktır."""
             ozet_renk = "#c0392b"
 
     msg = MIMEMultipart()
